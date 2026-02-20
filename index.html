@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>होली का खास तोहफा!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Karma:wght@400;700&display=swap');
+        body { background: #fff5f8; font-family: 'Karma', serif; margin: 0; text-align: center; overflow-x: hidden; }
+        .main-box { max-width: 500px; margin: auto; background: white; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.1); position: relative; border-left: 5px solid #ff0055; border-right: 5px solid #25D366; }
+        
+        /* Colorful Background Animation */
+        .header-bg { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; padding: 20px; font-weight: bold; font-size: 24px; animation: colorChange 5s infinite; }
+        @keyframes colorChange { 0%{background:#ff0055;} 25%{background:#ffcc00;} 50%{background:#00ccff;} 75%{background:#25D366;} 100%{background:#ff0055;} }
+        
+        .name-txt { font-size: 35px; color: #ff0055; font-weight: bold; margin-top: 15px; animation: bounce 1s infinite; }
+        @keyframes bounce { 0%, 100% {transform: scale(1);} 50% {transform: scale(1.1);} }
+
+        .pichkari-img { width: 150px; margin: 20px; cursor: pointer; }
+        
+        /* Ad Slots */
+        .ad-container { background: #fdfdfd; border: 1px dashed #ccc; margin: 15px auto; width: 90%; min-height: 100px; }
+
+        .input-bar { background: #222; padding: 20px; position: fixed; bottom: 0; width: 100%; max-width: 500px; box-sizing: border-box; border-top: 4px solid #ffcc00; }
+        input { width: 65%; padding: 12px; border-radius: 8px; border: none; font-size: 16px; outline: none; }
+        .btn-ok { background: #ffcc00; color: #000; padding: 12px 15px; border-radius: 8px; border: none; font-weight: bold; cursor: pointer; }
+        
+        .share-wa { background: #25D366; color: white; display: block; padding: 15px; margin: 20px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 20px; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% {box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);} 70% {box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);} 100% {box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);} }
+    </style>
+</head>
+<body>
+
+<div class="main-box">
+    <div class="header-bg">✨ होली मुबारक ✨</div>
+
+    <div class="ad-container">
+        <script async="async" data-cfasync="false" src="https://pl28743930.effectivegatecpm.com/16a7b68d6fbb9bede8be362f909e17d4/invoke.js"></script>
+        <div id="container-16a7b68d6fbb9bede8be362f909e17d4"></div>
+    </div>
+
+    <div id="sender" class="name-txt">दोस्त ने</div>
+    <p>आपको होली की रंगीन बधाई भेजी है!</p>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/3063/3063810.png" class="pichkari-img" onclick="showWish()" alt="Pichkari">
+
+    <div id="wishDiv" style="display:none; padding: 15px;">
+        <h2 style="color: #ff0055;">🎨 बुरा न मानो होली है! 🎨</h2>
+        <p style="font-size: 18px; line-height: 1.6;">
+            होली के इस पावन पर्व पर आपके जीवन में <br>
+            खुशियों के रंग बरसे। <br>
+            <b>Happy Holi 2026!</b>
+        </p>
+
+        <div class="ad-container">
+            <a href="https://www.effectivegatecpm.com/yct5qaruui?key=3ecd9211875b400491fea171225148cc" target="_blank" style="text-decoration: none; color: #bc1888; font-weight: bold; font-size: 20px;">
+               🎁 होली का खास इनाम देखें 🎁
+            </a>
+        </div>
+
+        <a id="waShare" href="#" class="share-wa">📲 यहाँ से सबको भेजें</a>
+    </div>
+
+    <div class="input-bar">
+        <input type="text" id="nameBox" placeholder="अपना नाम यहाँ लिखें...">
+        <button class="btn-ok" onclick="genLink()">OK</button>
+    </div>
+</div>
+
+<script>
+    const urlP = new URLSearchParams(window.location.search);
+    const n = urlP.get('n');
+    if(n) document.getElementById('sender').innerText = n;
+
+    function showWish() {
+        document.getElementById('wishDiv').style.display = 'block';
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function genLink() {
+        const myName = document.getElementById('nameBox').value;
+        if(!myName) return alert("नाम लिखें!");
+        
+        const base = window.location.href.split('?')[0];
+        const link = base + "?n=" + encodeURIComponent(myName);
+        const text = encodeURIComponent("🌈 *" + myName + "* ने आपके लिए होली का एक रंगीन तोहफा भेजा है। इसे अभी खोलें 👇\n" + link);
+        
+        window.location.href = "https://api.whatsapp.com/send?text=" + text;
+    }
+</script>
+
+</body>
+</html>
