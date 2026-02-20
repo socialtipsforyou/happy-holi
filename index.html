@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holi Special Surprise 🌈</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Karma:wght@400;700&family=Poppins:wght@400;700&display=swap');
+        
+        body { margin: 0; padding: 0; background: #fff; font-family: 'Poppins', sans-serif; text-align: center; overflow-x: hidden; }
+        .container { max-width: 500px; margin: auto; background: #fff; min-height: 100vh; position: relative; overflow: hidden; border: 5px solid; border-image: linear-gradient(45deg, #ff0055, #ffcc00, #00ccff, #25D366) 1; }
+
+        /* Animated Header */
+        .top-banner { background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); background-size: 400% 400%; animation: gradient 5s ease infinite; color: white; padding: 15px; font-weight: bold; font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        @keyframes gradient { 0% {background-position: 0% 50%;} 50% {background-position: 100% 50%;} 100% {background-position: 0% 50%;} }
+
+        .name-container { margin-top: 30px; font-size: 32px; color: #ff0055; font-weight: 700; text-transform: uppercase; animation: zoomIn 1s; }
+        @keyframes zoomIn { from {transform: scale(0);} to {transform: scale(1);} }
+
+        /* Interactive Element */
+        .magic-box { width: 180px; margin: 30px auto; cursor: pointer; transition: 0.3s; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% {transform: scale(1);} 50% {transform: scale(1.1);} 100% {transform: scale(1);} }
+
+        /* Main Wish Area */
+        #wishArea { display: none; padding: 20px; animation: slideUp 0.8s ease-out; }
+        @keyframes slideUp { from {transform: translateY(100px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+
+        .ad-box { background: #fdfdfd; border: 1.5px dashed #ff0055; margin: 20px auto; width: 95%; min-height: 120px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+
+        .wish-text { font-family: 'Karma', serif; font-size: 20px; line-height: 1.8; color: #333; background: #fff0f6; padding: 20px; border-radius: 20px; border: 2px solid #ffcc00; }
+
+        /* Bottom Section (No-Redirect Input) */
+        .bottom-bar { background: #111; padding: 20px; position: fixed; bottom: 0; width: 100%; max-width: 500px; box-sizing: border-box; display: flex; gap: 10px; box-shadow: 0 -5px 15px rgba(0,0,0,0.3); border-top-left-radius: 20px; border-top-right-radius: 20px; }
+        input { flex: 1; padding: 12px; border-radius: 50px; border: 2px solid #ffcc00; font-size: 16px; text-align: center; outline: none; font-family: 'Poppins', sans-serif; }
+        .btn-magic { background: #ffcc00; color: #000; border: none; padding: 0 25px; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .btn-magic:hover { transform: scale(1.05); background: #fff; }
+
+        .share-wa { background: #25D366; color: white; display: none; padding: 15px; margin: 20px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; text-align: center; box-shadow: 0 5px 15px rgba(37,211,102,0.4); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="top-banner">✨ HAPPY HOLI 2026 ✨</div>
+
+    <div class="ad-box">
+        <script async="async" data-cfasync="false" src="https://pl28743930.effectivegatecpm.com/16a7b68d6fbb9bede8be362f909e17d4/invoke.js"></script>
+        <div id="container-16a7b68d6fbb9bede8be362f909e17d4"></div>
+    </div>
+
+    <div id="displayName" class="name-container">मेरे प्यारे दोस्त</div>
+    <p style="font-weight: bold; color: #666;">ने आपके लिए रंगों भरा जादू भेजा है!</p>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/3063/3063810.png" class="magic-box" onclick="showHoliMagic()" alt="Magic">
+
+    <div id="wishArea">
+        <div class="wish-text">
+            <h2 style="color: #ff0055; margin-top: 0;">🎨 बुरा न मानो होली है! 🎨</h2>
+            रंगों का त्यौहार आया है,<br>
+            ढेर सारी खुशियाँ लाया है!<br>
+            भोलेनाथ की कृपा आप पर बनी रहे।<br>
+            <b>होली मुबारक 🌈</b>
+        </div>
+
+        <div class="ad-box">
+            <a href="https://www.effectivegatecpm.com/yct5qaruui?key=3ecd9211875b400491fea171225148cc" target="_blank" style="text-decoration:none; color:#23a6d5; font-weight:bold; font-size:20px; animation: bounce 1s infinite;">
+               🎁 होली सरप्राइज इनाम खोलें (Click) 🎁
+            </a>
+        </div>
+    </div>
+
+    <a id="waBtn" href="#" class="share-wa">📲 सबको भेजें (WhatsApp)</a>
+
+    <div class="bottom-bar">
+        <input type="text" id="userInput" placeholder="अपना नाम यहाँ लिखें...">
+        <button class="btn-magic" onclick="updateName()">OK</button>
+    </div>
+</div>
+
+<script>
+    // URL se name nikaalne ke liye
+    const params = new URLSearchParams(window.location.search);
+    const n = params.get('n');
+    if(n) document.getElementById('displayName').innerText = n;
+
+    function showHoliMagic() {
+        document.getElementById('wishArea').style.display = 'block';
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    // No-Redirect Name Update Function
+    function updateName() {
+        const inp = document.getElementById('userInput').value;
+        if(!inp) return alert("कृपया अपना नाम लिखें!");
+        
+        // UI Update without refresh
+        document.getElementById('displayName').innerText = inp;
+        document.getElementById('wishArea').style.display = 'block';
+        
+        // Share Button taiyar karna
+        const currentBase = window.location.href.split('?')[0];
+        const shareLink = currentBase + "?n=" + encodeURIComponent(inp);
+        const text = encodeURIComponent("🌈 *" + inp + "* ने आपके लिए होली का एक रंगीन जादू भेजा है। इसे अभी देखें 👇\n" + shareLink);
+        
+        const waBtn = document.getElementById('waBtn');
+        waBtn.href = "https://api.whatsapp.com/send?text=" + text;
+        waBtn.style.display = 'block';
+        
+        // Scroll to new name
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
