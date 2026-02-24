@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Holi 2026 - Wishing You!</title>
+    
+    <script src="https://pl28721831.effectivegatecpm.com/1c/b1/38/1cb138209d61c0fae7baad1c3b2c9d7b.js"></script>
+
+    <script src="https://pl28743927.effectivegatecpm.com/a1/21/87/a1218764c4e29e169e494177e0723c4c.js"></script>
+
+    <style>
+        body { background: #fdf2e9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin: 0; padding: 0; }
+        .main-card { background: white; max-width: 500px; margin: 10px auto; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); overflow: hidden; padding-bottom: 20px; position: relative; }
+        .user-name { font-size: 2.2em; color: #d32f2f; font-weight: 800; margin: 15px 0 5px 0; text-transform: capitalize; }
+        .from-text { font-size: 1.1em; color: #666; margin-bottom: 10px; }
+        .holi-img { width: 100%; height: auto; display: block; }
+        .native-ad-box { margin: 15px 5px; min-height: 100px; border: 1px solid #eee; }
+        .input-section { padding: 20px; background: #fff; border-top: 2px dashed #ff8c00; }
+        input[type="text"] { width: 80%; padding: 12px; border: 2px solid #ff8c00; border-radius: 10px; font-size: 1em; margin-bottom: 15px; outline: none; }
+        .wa-btn { background: #25d366; color: white; text-decoration: none; padding: 15px 30px; border-radius: 50px; display: none; font-weight: bold; font-size: 1.1em; box-shadow: 0 4px 10px rgba(37,211,102,0.4); }
+        .magic-btn { background: linear-gradient(45deg, #ff0055, #ff8c00); color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer; font-weight: bold; margin-bottom: 10px; width: 85%; }
+        .footer-text { font-size: 0.8em; color: #999; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="main-card">
+    <p class="from-text">Doston, Dekhiye</p>
+    <h1 class="user-name" id="display-name">Aapka Dost</h1>
+    <p class="from-text">ne aapke liye kuch bheja hai...</p>
+
+    <img src="https://i.ibb.co/Vp8p1hW/image.png" alt="Holi Wishes" class="holi-img">
+
+    <div class="native-ad-box">
+        <script async="async" data-cfasync="false" src="https://pl28743930.effectivegatecpm.com/16a7b68d6fbb9bede8be362f909e17d4/invoke.js"></script>
+        <div id="container-16a7b68d6fbb9bede8be362f909e17d4"></div>
+    </div>
+
+    <div class="input-section">
+        <button class="magic-btn" onclick="openSmartLink()">Holi Ka Special Gift Dekhen! 🎁</button>
+        
+        <p style="font-weight: bold; color: #ff5500;">Apna naam likh kar sabko bhejen:</p>
+        <input type="text" id="nameInput" placeholder="Yahan apna naam likhen...">
+        <br>
+        <button class="magic-btn" style="background: #007bff;" onclick="createLink()">Link Banaye ✨</button>
+        
+        <center>
+            <a href="#" id="whatsapp-share" class="wa-btn">
+                WhatsApp par Share Kare 📲
+            </a>
+        </center>
+    </div>
+
+    <p class="footer-text">© Happy Holi 2026 - Spread Love</p>
+</div>
+
+<script>
+    // URL se Name nikalna
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('n');
+    if (name) {
+        document.getElementById('display-name').innerText = decodeURIComponent(name);
+    }
+
+    // Smartlink Function
+    function openSmartLink() {
+        window.open("https://www.effectivegatecpm.com/yct5qaruui?key=3ecd9211875b400491fea171225148cc", "_blank");
+    }
+
+    // WhatsApp Link Generator
+    function createLink() {
+        const inputName = document.getElementById('nameInput').value;
+        if (inputName.trim() !== "") {
+            const baseUrl = window.location.href.split('?')[0];
+            const finalUrl = baseUrl + "?n=" + encodeURIComponent(inputName);
+            const shareBtn = document.getElementById('whatsapp-share');
+            
+            // WhatsApp Message Format
+            const msg = "Dekhiye *" + inputName + "* ne aapke liye ek bahut pyara surprise bheja hai! 🌈✨\nNiche click karke dekhen 👇\n" + finalUrl;
+            
+            shareBtn.href = "https://api.whatsapp.com/send?text=" + encodeURIComponent(msg);
+            shareBtn.style.display = "inline-block";
+            alert("Aapka link ban gaya hai! Ab niche wale WhatsApp button par click karke doston ko bhejen.");
+        } else {
+            alert("Pehle apna naam to likhen!");
+        }
+    }
+</script>
+
+</body>
+</html>
